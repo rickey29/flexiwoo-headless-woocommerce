@@ -1,0 +1,23 @@
+# Auto detect text files and normalize line endings
+* text=auto
+
+# Force LF for source files
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.md text eol=lf
+
+# Lock files - text but don't normalize (preserve exact content)
+yarn.lock text -diff linguist-generated
+
+# Config files
+*.config.ts text eol=lf
+*.config.mjs text eol=lf
+tsconfig.json text eol=lf
+
+# GitHub linguist - mark generated/vendored
+coverage/** linguist-generated
+.next/** linguist-generated
