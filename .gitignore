@@ -74,7 +74,7 @@ next-env.d.ts
 # claude
 .claude
 
-# Development debugging files
+# Development and debugging files
 *-debug.json
 *-test.json
 
