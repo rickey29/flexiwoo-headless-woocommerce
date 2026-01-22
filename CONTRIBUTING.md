@@ -1,8 +1,8 @@
-# Contributing to headless-woocommerce-nextjs-storefront
+# Contributing to flexi
 
-Thank you for contributing to this project.
+Thank you for contributing to flexi.
 
-This project is a **stateless rendering engine** with intentionally strict architectural boundaries. These rules are not preferences — they are **non-negotiable constraints** designed to keep this project fast, secure, and predictable.
+flexi is a **stateless rendering engine** with intentionally strict architectural boundaries. These rules are not preferences — they are **non-negotiable constraints** designed to keep flexi fast, secure, and predictable.
 
 **If a contribution violates any rule below, it will not be accepted.**
 
@@ -10,28 +10,28 @@ This project is a **stateless rendering engine** with intentionally strict archi
 
 ## 1. Core Principle (Must Read)
 
-> **This project is a pure rendering function: JSON in, HTML out, no side effects.**
+> **flexi is a pure rendering function: JSON in, HTML out, no side effects.**
 
-Any code that violates this principle does not belong in this project.
+Any code that violates this principle does not belong in flexi.
 
 ---
 
-## 2. What This Project IS
+## 2. What flexi IS
 
-This project is:
+flexi is:
 
 - A **stateless HTML rendering engine** for WooCommerce pages
 - A **template composition system** using server-side string generation
 - A **validation layer** that rejects malformed input gracefully
 - A **security boundary** that sanitizes all output
 
-**This project is NOT a commerce engine, API gateway, or state manager.**
+**flexi is NOT a commerce engine, API gateway, or state manager.**
 
 ---
 
-## 3. What This Project Is NOT (Non-Negotiable)
+## 3. What flexi Is NOT (Non-Negotiable)
 
-This project must **NEVER**:
+flexi must **NEVER**:
 
 - Store state between requests (no databases, no files, no global variables)
 - Make outbound HTTP requests to WooCommerce or external services
@@ -42,7 +42,7 @@ This project must **NEVER**:
 - Cache rendered output (caching is the caller's responsibility)
 - Trust input data without Zod validation
 
-**If your code needs to do any of the above, it belongs in flexi-woo or flx, not this project.**
+**If your code needs to do any of the above, it belongs in flexi-woo or flx, not flexi.**
 
 ---
 
@@ -73,7 +73,7 @@ function renderPrice(price: string): string {
 
 ### 4.2 No State Persistence
 
-This project must not:
+flexi must not:
 
 - Write to the filesystem
 - Use global variables to store request data
@@ -148,7 +148,7 @@ All URLs must be sanitized:
 
 ### 6.3 No Dynamic Code Execution
 
-This project must never:
+flexi must never:
 
 - Use `eval()` or `new Function()`
 - Execute code from request payloads
@@ -160,7 +160,7 @@ This project must never:
 
 ### 7.1 Graceful Degradation
 
-When this project cannot render, it must:
+When flexi cannot render, it must:
 
 1. Return HTTP 503
 2. Include `x-flexi-fallback` header with reason
@@ -304,7 +304,7 @@ Before submitting a PR, verify:
 
 ## 13. Final Note
 
-This project's strength comes from **what it refuses to do**.
+flexi's strength comes from **what it refuses to do**.
 
 Maintaining strict boundaries allows:
 

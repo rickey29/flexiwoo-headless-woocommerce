@@ -38,7 +38,7 @@ FlexiWoo consists of two components:
 **WordPress Bridge** - [See flexi-woo on WordPress.org](https://wordpress.org/plugins/flexi-woo/)
 
 - **Technology:** PHP 8+, WooCommerce 8+
-- **Purpose:** Intercepts WooCommerce pages, sends data to this project, displays rendered HTML
+- **Purpose:** Intercepts WooCommerce pages, sends data to flexi, displays rendered HTML
 - **Deployment:** Standard WordPress plugin
 
 **How it works:**
@@ -48,9 +48,9 @@ Customer visits WooCommerce page
          ↓
 WordPress/flexi-woo intercepts request
          ↓
-flexi-woo sends page data to this project (POST /api/v1/product, /cart, etc.)
+flexi-woo sends page data to flexi (POST /api/v1/product, /cart, etc.)
          ↓
-This project renders HTML with modern design
+flexi renders HTML with modern design
          ↓
 WordPress displays the rendered page
 ```
@@ -242,7 +242,7 @@ The UI matches the popular WooCommerce Storefront theme for familiarity:
 
 ### flexi-woo (WordPress Plugin)
 
-The companion WordPress plugin that bridges WooCommerce with this project.
+The companion WordPress plugin that bridges WooCommerce with flexi.
 
 - WordPress.org: [wordpress.org/plugins/flexi-woo](https://wordpress.org/plugins/flexi-woo/)
 - Status: In Development
