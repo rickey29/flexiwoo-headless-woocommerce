@@ -1,11 +1,6 @@
 # FlexiWoo (flexi)
 
-> **Free Open-Source Reference Rendering Engine for WooCommerce**
-> A fork-friendly infrastructure project for developers and agencies
-
-FlexiWoo is a **reference rendering engine** that generates HTML for WooCommerce pages. It is designed for developers and agencies who want full ownership and control over their headless WooCommerce UI.
-
-**100% Free and Open Source Forever (MIT License)**
+FlexiWoo is a headless WooCommerce implementation that provides production-ready frontend templates for WooCommerce using a REST-based architecture.
 
 ---
 
