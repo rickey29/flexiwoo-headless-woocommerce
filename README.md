@@ -4,7 +4,9 @@ FlexiWoo is a headless WooCommerce implementation that provides production-ready
 
 ---
 
-## What FlexiWoo Is
+## What is Headless WooCommerce
+
+Headless WooCommerce separates the frontend presentation layer from the WooCommerce backend, allowing modern frameworks to render pages while WooCommerce continues handling products, orders, and payments.
 
 FlexiWoo is **infrastructure**, not a product:
 
@@ -18,7 +20,7 @@ For complete positioning, see [docs/POSITIONING.md](docs/POSITIONING.md).
 
 ---
 
-## Features
+## Why Headless WooCommerce is Hard
 
 - **Fast Rendering** - Next.js 16 with React 19 for optimal performance
 - **Complete Page Coverage** - Renders ALL WooCommerce pages (products, shop, cart, checkout, thank-you, account, search)
@@ -31,7 +33,7 @@ For complete positioning, see [docs/POSITIONING.md](docs/POSITIONING.md).
 
 ---
 
-## Architecture
+## FlexiWoo Headless Architecture
 
 FlexiWoo consists of two components:
 
@@ -64,6 +66,12 @@ flexi renders HTML with modern design
          ↓
 WordPress displays the rendered page
 ```
+
+---
+
+## Headless WooCommerce Checkout (Important)
+
+FlexiWoo renders the checkout page as a headless frontend, but it does not process payments or manage orders. WooCommerce continues to handle payment gateways, order creation, and server-side session logic. FlexiWoo is UI-only for checkout and does not replace WooCommerce's payment infrastructure. This separation preserves compatibility with existing gateways and WooCommerce extensions.
 
 ---
 
@@ -149,6 +157,12 @@ yarn test:coverage    # Generate coverage report
 | [ARCHITECTURE.md](ARCHITECTURE.md) | Directory structure and layers |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
 | [CHANGELOG.md](CHANGELOG.md) | Version history and release notes |
+
+---
+
+## When FlexiWoo is Enough — and When It Isn't
+
+FlexiWoo is suitable when you need a production-ready headless rendering layer for WooCommerce pages with minimal architectural overhead. It works well for agencies and developers who want full control over frontend templates while keeping WooCommerce as the backend engine. FlexiWoo is not a payment orchestration or checkout recovery system; WooCommerce continues to handle transactions and order lifecycle management. For advanced payment reliability, recovery workflows, or enterprise guarantees, additional infrastructure may be required.
 
 ---
 
