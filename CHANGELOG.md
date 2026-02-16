@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- **Renderer URL** — Production URL changed from `https://flexi-storefront.flxwoo.com` to `https://flexi.flxwoo.com`
+- **Renderer URL** — Production URL changed from `https://flexi-storefront.flxwoo.com` to `https://flexiwoo-headless-woocommerce.vercel.app`
 
 ### Added
 
