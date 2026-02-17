@@ -42,8 +42,17 @@ jobs:
         continue-on-error: true
 
       - name: Run npm audit (fail on high/critical)
-        run: yarn audit --level high
-        # This will fail the workflow if high or critical vulnerabilities are found
+        run: |
+          set +e
+          yarn audit --level high
+          rc=$?
+          set -e
+          # yarn v1 exit code is a bitmask: 8=HIGH, 16=CRITICAL
+          # Only fail the step if high or critical bits are set
+          if [ $((rc & 24)) -ne 0 ]; then
+            echo "::error::High or critical vulnerabilities found"
+            exit 1
+          fi
 
       - name: Generate audit report
         if: failure()
