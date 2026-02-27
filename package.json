@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@sentry/nextjs": "^10.34.0",
+    "minimatch": ">=10.2.3",
     "next": "^16.1.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -47,7 +48,7 @@
     "vitest": "^4.0.3"
   },
   "resolutions": {
-    "minimatch": ">=10.2.1",
+    "minimatch": ">=10.2.3",
     "rollup": ">=4.59.0"
   }
 }
